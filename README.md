@@ -1,4 +1,4 @@
 Assinaturator
 =============
 
-Software para geração de assinatura de email
+Gerador de assinaturas
