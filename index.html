@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tegra - Gerador de Assinatura</title>
+    <title>Tegra - Signature Generator</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//code.getmdl.io/1.2.1/material.indigo-pink.min.css">
@@ -21,28 +21,28 @@
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
               <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">Gerador de Assinaturas da Tegra</span>
+                <span class="mdl-layout-title">Tegra's Signature Generator</span>
               </div>
 
             <form action="#">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" id="name" type="text" ng-model="$ctrl.model.name">
-                <label class="mdl-textfield__label" for="name">Nome</label>
+                <label class="mdl-textfield__label" for="name">Name</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" id="cellphone" type="text" mask="(99) 99999?-9999" mask-validate="false" ng-model="$ctrl.model.cellphone">
-                <label class="mdl-textfield__label" for="cellphone">Celular</label>
+                <label class="mdl-textfield__label" for="cellphone">Mobile Number</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" dirt-it id="email" pattern="[a-z][0-9a-z_\.-]+[a-z0-9]" type="text" ng-model="$ctrl.model.email">
                 <label class="mdl-textfield__label" for="email">Email</label>
-                <span class="mdl-textfield__error">Somente o que vem antes da @</span>
+                <span class="mdl-textfield__error">Only what comes before @</span>
               </div>
             </form>
 
             <div ng-show="$ctrl.model.name && $ctrl.model.email" class="demo-card-wide mdl-card mdl-shadow--2dp">
               <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Sua Assinatura</h2>
+                <h2 class="mdl-card__title-text">Your Signature</h2>
               </div>
               <div class="mdl-card__supporting-text signature-container" id="signature-container">
                 <div dir="ltr">
@@ -59,8 +59,8 @@
                           </table>
                           <p style="font-family:monospace,sans-serif;font-size:10px;line-height:18px;color:rgb(51,51,51)">
                             <a href="mailto:{{ $ctrl.model.email }}@tegra.me" style="color:rgb(17,85,204)" target="_blank">{{ $ctrl.model.email }}@tegra.me</a>
-                            <br>(15) 3359-1801 (Matriz)
-                            <br>(11) 3280-1802 (Escritório Comercial)
+                            <br>(15) 3359-1801 (Head Office)
+                            <br>(11) 3280-1802 (Business Office)
                             <span ng-if="$ctrl.model.cellphone "><br>{{ $ctrl.model.cellphone }}</span>
                             <br><a href="http://www.tegra.me/" style="color:rgb(17,85,204)" target="_blank">http://tegra.me</a>
                             <br>
@@ -76,7 +76,7 @@
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect copyButton" ng-click="$ctrl.copy()">
-                  Copiar para a área de transferência
+                  Copy to clipboard
                 </button>
               </div>
             </div>
