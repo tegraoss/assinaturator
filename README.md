@@ -2,8 +2,9 @@ Assinaturator
 ==============
 Signature generator
 
-
 Application responsible for creating the signatures using [Angular](https://angularjs.org/), [Clipboard.js](https://clipboardjs.com/) and [Gravatar](https://en.gravatar.com/).
+
+![assinaturator](http://i.imgur.com/V056KYV.gif)
 
 Run the application
 =====================
