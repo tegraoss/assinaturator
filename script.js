@@ -42,13 +42,14 @@
       link: function($scope, element) {
         var target = angular.element(element);
         var interval;
+        var seed = Math.floor(Math.random() * 100) + 1  
 
         target.css('display', 'none');
         $scope.$watch('avatar', function(v) {
           clearInterval(interval);
           interval = setTimeout(function() {
             var hash = md5.createHash(v);
-            var src = 'http://0.gravatar.com/avatar/' + hash + '?s=60&d=mm&r=g';
+            var src = 'http://0.gravatar.com/avatar/' + hash + '?s=60&d=mm&r=g&seed=' + seed;
             target.attr('src', src);
             target.css('display', 'block');
           }, 500);
